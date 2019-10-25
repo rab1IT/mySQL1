@@ -1,16 +1,17 @@
 <?php
 
 for($i = 1; $i <= 100; $i++){
-    if($i % 5 === 0 && $i % 3 === 0 ){
-        echo 'FizzBuzz<br>';
-        }
-    elseif($i % 3 === 0 ){
+    
+    if($i % 3 === 0 ){
             echo 'Fizz<br>';
             }
-    elseif($i % 5 === 0 ){
+    if($i % 5 === 0 ){
             echo 'Buzz<br>';
             }
+    if($i % 5 === 0 && $i % 3 === 0 ){
+        echo 'FizzBuzz<br>';
+        }  
     else{
-        echo $i;
-    }        
+            echo '<br>';
+        } 
     }
