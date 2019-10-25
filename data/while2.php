@@ -1,5 +1,6 @@
 <?php
-for($i = 1; $i <= 100; $i++){
+$i = 1;
+while($i <= 100){
     if($i % 5 === 0 && $i % 3 === 0 ){
         echo 'FizzBuzz<br>';
         } 
@@ -12,4 +13,5 @@ for($i = 1; $i <= 100; $i++){
     else{
             echo $i .'<br>';
         } 
+    $i++;
     }
