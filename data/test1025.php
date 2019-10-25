@@ -14,5 +14,5 @@ while($i <= 100){
     else{
         echo $i;
     }        
-        $i ++;
+        $i++;
     }
