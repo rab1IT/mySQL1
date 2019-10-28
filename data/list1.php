@@ -1,8 +1,3 @@
-<?php
-
-for($i = 1; $i <= 8; $i++){
-    echo $i.'行目です';
-}
 <html>
 <head>
 <style>
@@ -12,7 +7,7 @@ for($i = 1; $i <= 8; $i++){
 </head>
 <body>
     <ul>
-        <?php for($i = 1;$i <= 20;$i++){
+        <?php for($i = 1 ; $i <= 20 ; $i++){
         //ここに連続する処理の内容を書き込む
         <li class="color-red">1</li>
         <li>2</li>
