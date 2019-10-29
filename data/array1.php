@@ -5,4 +5,4 @@ $array = array();
 $array[] = 'リンゴ';
 $array[] = 'トマト';
 $array[] = 'みかん';
-echo $array[2];
+echo $array[3];
