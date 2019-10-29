@@ -7,8 +7,10 @@
 <input type="checkbox" name="colors[]" value = "青">青
 <input type="checkbox" name="colors[]" value = "赤">赤
 <input type="checkbox" name="colors[]" value = "黄”>黄
+<input type="checkbox" name="colors[]" value = "青">青
+<input type="checkbox" name="colors[]" value = "赤">赤
 </p>
-<input type="checkbox" name="colors[]" value = "黄”>黄
+<input type="submit>
 </form>
 </body>
 </html>
