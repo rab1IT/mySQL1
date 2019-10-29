@@ -7,7 +7,8 @@
 </head>
 <body>
     <ul>
-        <?php for($i = 1 ; $i <= 20 ; $i++){
+        <?php
+        for($i = 1; $i <= 20; $i++){
             if($i % 2 === 1) {　?>
             <li class="color-red">奇数</li>
             <?php }else{ ?>
