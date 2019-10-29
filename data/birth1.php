@@ -13,16 +13,17 @@
     </select>年<br>
     <select name="month">
     <?php
-    for($i = 1; $i <= 12; $i++){
-     ?>
+    for($i = 1; $i <= 12; $i++){ ?>
     <option value="<?php echo $i;?>">
         <?php echo $i;?>
     </option>
-    <?php 
-    } ?>
+    <?php } ?>
     </select>月
     <select name="day">
-    
+    <?php
+    for($i = 1;$i <=31; $i++){ ?>
+<option value="<?php echo $i; ?>"><?php echo $i ;?></option>
+    <?php } ?>
 </select>日
 </body>
 </html>
