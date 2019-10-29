@@ -1,13 +1,28 @@
 <html>
 <body>
-<h1>生年月日を入力するフォームを作ろう</h1>
-<label for="year">西暦</label>
-<select name="year">
-<option value="1980">1980</option>
-<option value="1981">1981</option>
-</select>
-
-
-
+    <h1>生年月日を入力するフォームを作ろう</h1>
+    <label for="year">西暦</label>
+    <select name="year">
+        <?php
+        $now = date("Y");
+        for($i = 1950;$i <= $now; $i++){ ?>
+            <option value="<?php echo $i;?>">
+            <?php echo $i; ?>
+            </option> <?php
+        } ?>
+    </select>年<br>
+    <select name="month">
+    <?php
+    for($i = 1; $i <= 12; $i++){
+     ?>
+    <option value="<?php echo $i;?>">
+        <?php echo $i;?>
+    </option>
+    <?php 
+    } ?>
+    </select>月
+    <select name="day">
+    
+</select>日
 </body>
 </html>
