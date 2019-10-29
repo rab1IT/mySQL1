@@ -1,8 +1,8 @@
 <?php
 
-$array = array();
+$array = array();//配列として初期化
 
-$array[] = 'リンゴ';
-$array[] = 'トマト';
-$array[] = 'みかん';
-echo $array[3];
+$array['name'] = '鈴木';
+$array['hobby'] = 'テニス';
+$array['email'] = 'sam@sam.com';
+echo $array['name'];
