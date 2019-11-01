@@ -8,20 +8,13 @@
 <form action="task4.php" method="POST">
     <label>名前</label>
     <select name="user_name">
-        <option>社長</option>
-        <option>鈴木さん</option>
-        <option>高橋さん</option>
-        <option>山田さん</option>
-        <option>中村さん</option>
+        <option value="社長">社長</option>
+        <option value="鈴木さん"> 鈴木さん</option>
+        <option value="高橋さん">高橋さん</option>
+        <option value="山田さん">山田さん</option>
+        <option value="中村さん">中村さん</option>
     </select>
     <br>
-    <label>チーム</label>
-    <select name="term">
-        <option>社長</option>
-        <option>営業チーム</option>
-        <option>経理チーム</option>
-        <option>総務チーム</option>
-    </select>
     <br>
     <label>パスワード</label>
     <input class="passbox" type="text" name="pass" size="30px">

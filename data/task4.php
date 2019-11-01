@@ -1,7 +1,6 @@
 <?php
 //form1からPOSTされてきたデータを変数に取得する
 $user_name = $_POST['user_name'];
-$term = $_POST['term'];
 $pass = $_POST['pass'];
 ?>
 <?php
@@ -76,7 +75,6 @@ $array2 = array(
 	)
 	);
 ?>
-
 <html>
 <head lang="ja">
     <meta charset="utf-8">
@@ -85,58 +83,18 @@ $array2 = array(
 <body>                                                                  
 	<h1>結果一覧</h1>  
 <?php 
-if($_POST['user_name'] === $array1[0]['user_name'] 
-&& $_POST['term'] === $array1[0]['term']
-&& $_POST['pass'] === $array1[0]['pass1']){
-		echo $array2[0]['task1'];
-		echo '<br>';
-		echo $array2[0]['task2'];
-		echo '<br>';
-		
-	}elseif($_POST['user_name'] === $array1[1]['user_name'] 
-	&& $_POST['term'] === $array1[1]['term']
-	&& $_POST['pass'] === $array1[1]['pass1']){
-		echo $array2[1]['task1'];
-		echo '<br>';
-		echo $array2[1]['task2'];
-		echo '<br>';
-	}elseif($_POST['user_name'] === $array1[2]['user_name'] 
-	&& $_POST['term'] === $array1[2]['term']
-	&& $_POST['pass'] === $array1[2]['pass1']){
-		echo $array2[2]['task1'];
-		echo '<br>';
-		echo $array2[2]['task2'];
-		echo '<br>';
-		echo $array2[2]['task3'];
-		echo '<br>';
-	}elseif($_POST['user_name'] === $array1[3]['user_name'] 
-	&& $_POST['term'] === $array1[3]['term']
-	&& $_POST['pass'] === $array1[3]['pass1']){
-		echo $array2[1]['task1'];
-		echo '<br>';
-		echo $array2[1]['task2'];
-		echo '<br>';
-	}elseif($_POST['user_name'] === $array1[4]['user_name'] 
-	&& $_POST['term'] === $array1[4]['term']
-	&& $_POST['pass'] === $array1[4]['pass1']){
-		echo $array2[1]['task1'];
-		echo '<br>';
-		echo $array2[1]['task2'];
-		echo '<br>';
-	}elseif($_POST['user_name'] === $array1[5]['user_name'] 
-	&& $_POST['term'] === $array1[5]['term']
-	&& $_POST['pass'] === $array1[5]['pass1']){ 
-		foreach($array1 as $vals){
-			echo $vals[0].'('.$vals[1].')<br>';
-			echo '<br><br>';
+foreach($array1 as $key => $vals){
+	//echo $vals; 非表示。$vals にすべての情報を入れる。
+		if($user_name === $vals['user_name'] && $pass === $vals['pass1']){
+		echo $vals['user_name'].'('.$vals['term'].')<br>';
+			foreach($array2[$key] as $tas){
+			 //echo $tas; 非表示。$tas にすべての情報を入れる。				
+					echo $tas;
+			}
+		}elseif($user_name === $vals['user_name'] && $pass === $vals['pass1']){
+			echo 'パスワードが間違っています。';
 		}
-		foreach($array2 as $vals2){
-			echo $vals2[0].'('.$vals2[1].')<br>'.$vals2[3];
-			echo '<br><br>';
-		}
-	}else{
-		echo 'パスワードが間違っています。';
-	}
+}
 ?>
 </body>
 </html>
