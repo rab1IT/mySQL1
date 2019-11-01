@@ -126,11 +126,14 @@ if($_POST['user_name'] === $array1[0]['user_name']
 	}elseif($_POST['user_name'] === $array1[5]['user_name'] 
 	&& $_POST['term'] === $array1[5]['term']
 	&& $_POST['pass'] === $array1[5]['pass1']){ 
-		foreach($array1 as $value1){
-			foreach ($value1 as $key2 => $value2){
-				echo "{$key2} : {$value2}<br/>";
-				}
-			}
+		foreach($array1 as $vals){
+			echo $vals[0].'('.$vals[1].')<br>';
+			echo '<br><br>';
+		}
+		foreach($array2 as $vals2){
+			echo $vals2[0].'('.$vals2[1].')<br>'.$vals2[3];
+			echo '<br><br>';
+		}
 	}else{
 		echo 'パスワードが間違っています。';
 	}
