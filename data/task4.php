@@ -88,13 +88,20 @@ foreach($array1 as $key => $vals){
 		if($user_name === $vals['user_name'] && $pass === $vals['pass1']){
 		echo $vals['user_name'].'('.$vals['term'].')<br>';
 			foreach($array2[$key] as $tas){
-			 //echo $tas; 非表示。$tas にすべての情報を入れる。				
-					echo $tas;
+				echo $tas;
+				//$tas にすべての情報を入れる。
 			}
 		}elseif($user_name === $vals['user_name'] && $pass === $vals['pass1']){
 			echo 'パスワードが間違っています。';
+			//3〜6個目の繰り返し結果を消す
 		}
 }
+foreach($array1 as $key => $rows){
+	if($user_name === $rows[5]['user_name'] && $pass === $rows[5]['pass1']){
+	echo $rows['user_name'].'('.$rows['term'].')<br>';
+	foreach($array2 as $task){
+		echo $task;
+	}}}
 ?>
 </body>
 </html>
