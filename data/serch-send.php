@@ -6,7 +6,7 @@
 <body>
     <h1>検索アプリ</h1>
     <p>名前の一致する会員を一覧にしよう</p>
-    <form action="serch-receive.php" method="POST" border=1>
+    <form action="serch-receive.php" method="POST" border=2>
     <label>お名前</label>
     <input type="text" name="name">
     <input type="submit" value="検索する">

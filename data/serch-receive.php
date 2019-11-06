@@ -16,7 +16,7 @@ try{
     $sql = "SELECT id,name From user WHERE LIKE :name"; 
     //全件取得
     $stmt = $dbh->prepare($sql);
-    $stmt->bindValue(':name','%'.$name.'&',PDO::PARAM_STR);
+    $stmt->bindValue(':name','%'.$name.'%',PDO::PARAM_STR);
     $stmt->execute();
 
     $count = $stmt->rowCount();//行数を取得する
