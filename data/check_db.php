@@ -1,9 +1,9 @@
 <?php echo '<p>PHP画面</p>'; ?>
 <?php
 echo '<p>Postgresへの接続テストコード</p>';
-$dsn = 'pgsql:dbname=postgres;host=pgsql;port=5432';
-$user = 'postgres';
-$pass = 'example';
+$dsn = "mysql:host=db;dbname=sample";
+$user = "user";
+$password = "userpass";
 try {
     $dbh = new PDO($dsn, $user, $pass);
     $sql = 'SELECT CURRENT_TIMESTAMP';

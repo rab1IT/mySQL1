@@ -85,23 +85,22 @@ $array2 = array(
 <?php 
 foreach($array1 as $key => $vals){
 	//echo $vals; 非表示。$vals にすべての情報を入れる。
-		if($user_name === $vals['user_name'] && $pass === $vals['pass1']){
-		echo $vals['user_name'].'('.$vals['term'].')<br>';
-			foreach($array2[$key] as $tas){
-				echo $tas;
-				//$tas にすべての情報を入れる。
-			}
-		}elseif($user_name === $vals['user_name'] && $pass === $vals['pass1']){
-			echo 'パスワードが間違っています。';
-			//3〜6個目の繰り返し結果を消す
+	if($user_name === $vals['user_name'] && $pass === $vals['pass1']){
+			echo $vals['user_name'].'('.$vals['term'].')<br>';
+				foreach($array2[$key] as $tas){
+					echo $tas.'<br>';
+					//$tas にすべての情報を入れる。
+				}
+	}elseif($user_name === $vals['user_name'] && $pass === $vals['pass1']){
+		echo 'パスワードが間違っています。';
+	}
+	elseif($user_name === $vals[5]['user_name'] && $pass === $vals[5]['pass1']){	
+		echo $array1[0]['user_name'].'('.$array1[0]['term'].')<br>';
+		echo $array2[0]['task1'];
+		echo $array2[0]['task2'];
+
 		}
-}
-foreach($array1 as $key => $rows){
-	if($user_name === $rows[5]['user_name'] && $pass === $rows[5]['pass1']){
-	echo $rows['user_name'].'('.$rows['term'].')<br>';
-	foreach($array2 as $task){
-		echo $task;
-	}}}
+	}
 ?>
 </body>
 </html>

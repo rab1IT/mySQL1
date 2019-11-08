@@ -5,7 +5,7 @@
 </head>
 <body>  
 <h1>株式会社クリエイト　業務管理システム</h1>
-<form action="task4.php" method="POST">
+<form action="task1.php" method="POST">
     <label>名前</label>
     <select name="user_name">
         <option value="社長">社長</option>
